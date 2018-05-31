@@ -39,7 +39,7 @@ class MyPublicGithubProfileTests(unittest.TestCase):
         # Assert it is Java
         self.assertEqual('Java', most_common[0][0], 'Seems like you should program more in Java.')
 
-    # Checks if I've performed more than 5 commits in the last week
+    # Checks if I've performed at more than 5 commits in the last week
     def test_commits_last_week(self):
         last_week_dates = map(lambda date: date.strftime("%Y-%m-%d"),
                               (map(lambda diff: datetime.today() - timedelta(days=diff), range(0, 7))))
